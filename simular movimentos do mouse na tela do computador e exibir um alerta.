@@ -1,0 +1,39 @@
+import pyautogui
+pyautogui.moveTo(797, 521, duration=1)
+pyautogui.moveRel(-150, 0, duration=0.5)
+pyautogui.moveRel(0, -150, duration=0.5)
+
+for k in range(0, 3):
+    pyautogui.moveRel(300, 0, duration=0.5)
+    pyautogui.moveRel(0, 300, duration=0.5)
+    pyautogui.moveRel(-300, 0, duration=0.5)
+    pyautogui.moveRel(0, -300, duration=0.5)
+
+pyautogui.alert('Parabéns! Você criou seu primeiro fantasma digital.')
+
+Ecplicação do código:
+Esse código utiliza a biblioteca `pyautogui` para simular movimentos do mouse na tela do computador e exibir um alerta.
+
+Vamos analisar o código linha por linha:
+
+1. `import pyautogui`: Esta linha importa a biblioteca `pyautogui`, que é usada para automatizar ações do mouse e do teclado.
+
+2. `pyautogui.moveTo(797, 521, duration=1)`: Move o cursor do mouse para as coordenadas `(797, 521)` na tela do computador. A opção `duration=1` especifica a duração em segundos da animação do movimento do mouse.
+
+3. `pyautogui.moveRel(-150, 0, duration=0.5)`: Move o cursor do mouse em relação à posição atual. Neste caso, move o cursor 150 pixels para a esquerda e nenhum pixel verticalmente. A duração do movimento é de 0,5 segundos.
+
+4. `pyautogui.moveRel(0, -150, duration=0.5)`: Move o cursor do mouse 150 pixels para cima em relação à posição atual. A duração do movimento é de 0,5 segundos.
+
+5. `for k in range(0, 3):`: Inicia um loop `for` que executa o código dentro dele três vezes.
+
+6. `pyautogui.moveRel(300, 0, duration=0.5)`: Move o cursor do mouse 300 pixels para a direita em relação à posição atual. A duração do movimento é de 0,5 segundos.
+
+7. `pyautogui.moveRel(0, 300, duration=0.5)`: Move o cursor do mouse 300 pixels para baixo em relação à posição atual. A duração do movimento é de 0,5 segundos.
+
+8. `pyautogui.moveRel(-300, 0, duration=0.5)`: Move o cursor do mouse 300 pixels para a esquerda em relação à posição atual. A duração do movimento é de 0,5 segundos.
+
+9. `pyautogui.moveRel(0, -300, duration=0.5)`: Move o cursor do mouse 300 pixels para cima em relação à posição atual. A duração do movimento é de 0,5 segundos.
+
+10. `pyautogui.alert('Parabéns! Você criou seu primeiro fantasma digital.')`: Exibe um alerta na tela com a mensagem "Parabéns! Você criou seu primeiro fantasma digital."
+
+No geral, esse código simula movimentos do mouse na tela do computador, criando uma forma geométrica básica, e depois exibe um alerta.
