@@ -1,0 +1,37 @@
+from selenium import webdriver
+import time
+from nltk.chat.util import Chat, reflections
+
+# Definindo pares de padrão e respostas para o chatbot
+pares = [
+    ['meu nome é (.*)', ['Olá %1, como posso te ajudar?']],
+    ['(oi|olá|oi!)', ['Olá, como posso te ajudar?']],
+    ['como você está?', ['Estou bem, obrigado por perguntar! E você?']],
+    ['(.*) idade (.*)', ['Eu sou apenas um programa de computador, então não tenho idade.']],
+    ['adeus', ['Até mais, tenha um bom dia!']],
+    ['(.*)', ['Desculpe, não entendi. Pode repetir?']]
+]
+
+# Criando o chatbot
+chatbot = Chat(pares, reflections)
+
+# Iniciando o navegador
+driver = webdriver.Chrome()  # Ou outro driver compatível com seu navegador
+
+# Abrindo o WhatsApp Web
+driver.get('https://web.whatsapp.com')
+input("Após fazer o login no WhatsApp Web, pressione Enter para continuar...")
+
+# Iniciando a conversa
+print("Olá! Eu sou um chatbot. Como posso te ajudar hoje?")
+
+while True:
+    entrada = input("Você: ")
+    resposta = chatbot.respond(entrada)
+
+    # Enviar resposta para o WhatsApp
+    chat_box = driver.find_element_by_xpath('//div[@contenteditable="true"][@data-tab="6"]')
+    chat_box.send_keys(resposta)
+    chat_box.send_keys('\n')
+
+    print("Chatbot:", resposta)
