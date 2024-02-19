@@ -1,0 +1,19 @@
+import pyautogui
+import webbrowser
+
+# Abrir o navegador
+webbrowser.open('https://www.exemplo.com')
+
+# Esperar a página carregar
+pyautogui.sleep(5)
+
+# Clicar em um botão
+pyautogui.click(x=100, y=200)
+
+EXPLICAÇÃO DO CÓDIGO:
+1. `import pyautogui`: Esta linha importa a biblioteca PyAutoGUI, que é uma biblioteca Python para automatizar interações com o mouse e o teclado.
+2. `import webbrowser`: Esta linha importa a biblioteca webbrowser, que fornece uma interface de alto nível para abrir URLs em um navegador web.
+3. `webbrowser.open('https://www.exemplo.com')`: Esta linha abre a URL 'https://www.exemplo.com' em um navegador web. O método `open()` da biblioteca webbrowser é usado para abrir URLs em navegadores padrão.
+4. `pyautogui.sleep(5)`: Esta linha pausa a execução do script por 5 segundos. O método `sleep()` da biblioteca PyAutoGUI é usado para adicionar uma pausa específica na execução do programa.
+5. `pyautogui.click(x=100, y=200)`: Esta linha simula um clique do mouse nas coordenadas (100, 200) da tela. O método `click()` da biblioteca PyAutoGUI é usado para realizar cliques do mouse.
+Aqui, especificamos as coordenadas x e y onde o clique será simulado. Este clique é usado para interagir com elementos na página da web aberta anteriormente. Certifique-se de ajustar as coordenadas (x, y) de acordo com a posição do botão na página da web.
